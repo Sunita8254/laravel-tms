@@ -14,14 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// frontend routes
 Route::get('/', function () {
-    return view('welcome');
+    return view('front-end.index');
+});
+Route::get('/about', function () {
+    return view('front-end.index');
 });
 
-Route::get('/index', function () {
-    return view('home');
-});
 
+// backend routes
+Route::resource('about-feature','App\Http\Controllers\AboutFeatureController');
+
+Route::get('/admin', function () {
+    return view('admin.index');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

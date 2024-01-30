@@ -45,3 +45,27 @@ routes:
 
 after clone project:
 composer update
+
+
+
+How to work??
+1. integrate frontend files in laravel templete & create route for frontend
+2. integrate backend files in laravel templete
+3. create controller, model and database 
+4. create routes for backend
+
+note: when you update web.php : php artisan optimize (clare config and route cache)
+
+
+Route::resource('about-feature','App\Http\Controllers\AboutFeatureController');
+
+now: browser   /about-feature
+                aboutFeatureController ko index function: about feature ko index page
+
+                /create
+                aboutFeatureController ko create function: about feature ko create page
+                after save
+                aboutFeatureController ko store function: add about feature data or store
+                
+
+                
