@@ -235,12 +235,12 @@
         </a>
         <ul id="about_features" class="nav-content collapse" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="../about_features/create.php">
+            <a href="{{route('about-feature.create')}}">
               <i class="bi bi-circle"></i><span>Add about_features</span>
             </a>
           </li>
           <li>
-            <a href="../about_features/index.php" class="active">
+            <a href="{{route('about-feature.index')}}" class="active">
               <i class="bi bi-circle"></i><span>Manage about_features</span>
             </a>
           </li>

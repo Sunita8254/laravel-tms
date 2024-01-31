@@ -12,7 +12,10 @@ class AboutFeatureController extends Controller
      */
     public function index()
     {
-        return view('admin.about_features.index');
+        $aboutFeatures= new AboutFeature;
+        $aboutFeatures=$aboutFeatures->all();
+
+        return view('admin.about_features.index', compact('aboutFeatures'));
     }
 
     /**
@@ -28,7 +31,22 @@ class AboutFeatureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate(
+            [
+                'icon' => 'required',
+                'title' => 'required',
+                'description' => 'required',
+            ]
+        );
+
+        $aboutFeature = new AboutFeature;
+        $aboutFeature->icon = $request->icon;
+        $aboutFeature->title = $request->title;
+        $aboutFeature->description = $request->description;
+
+        $aboutFeature->save();
+        return redirect()->route('about-feature.index');
     }
 
     /**

@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AboutFeature extends Model
+class Hero extends Model
 {
     use HasFactory;
-
-    protected $fillable =[
-        'icon',
+    protected $fillable = [
         'title',
-        'description'
+        'sub_title',
+        'img',
     ];
+
 }

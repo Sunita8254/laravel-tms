@@ -4,11 +4,11 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Manage About Features</h1>
+    <h1>Manage Hero</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <li class="breadcrumb-item active">Manage About Features </li>
+        <li class="breadcrumb-item active">Manage Hero </li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
@@ -19,7 +19,7 @@
 
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Manage About Features</h5>
+            <h5 class="card-title">Manage Hero</h5>
             <a class="btn btn-primary btn-sm " href="{{route('about-feature.create')}}" role="button">Add </a>
 
             <!-- Table with stripped rows -->
@@ -27,28 +27,22 @@
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Icon</th>
                   <th>Title</th>
                   <th>Description</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
-                @foreach ($aboutFeatures as $aboutFeature)
-                  
-             
                 <tr>
-                  <td>{{$loop->iteration}}</td>
-                  <td>{{$aboutFeature->icon}}</td>
-                  <td>{{$aboutFeature->title}}</td>
-                  <td>{{$aboutFeature->description}}</td>
+                  <td>hello</td>
+                  <td>hello</td>
+                  <td>hello</td>
                   <td>
                     <a class="btn btn-primary btn-sm " href="#" role="button">Edit </a>
-                    <a class="btn btn-info btn-sm " href="#" role="button">View </a>
-                    <a class="btn btn-danger btn-sm " href="#" role="button"> Delete</a>
+                    <a class="btn btn-primary btn-sm " href="#" role="button">View </a>
+                    <a class="btn btn-primary btn-sm " href="#" role="button"> Delete</a>
                   </td>
                 </tr>
-                @endforeach
               </tbody>
             </table>
             <!-- End Table with stripped rows -->

@@ -4,11 +4,11 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>About Features</h1>
+    <h1>About Hero</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <li class="breadcrumb-item active">About Features</li>
+        <li class="breadcrumb-item active">About Hero</li>
       </ol>
     </nav>
   </div><!-- End Page title -->
@@ -20,30 +20,17 @@
 
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">About Features</h5>
+            <h5 class="card-title">About Hero</h5>
             <!-- Vertical Form -->
             <form class="row g-3" method="POST" action="{{route('about-feature.store')}}" enctype="multipart/form-data">
               @csrf
               <div class="col-6">
-                <label for="icon" class="form-label">Icon</label>
-                <input type="text" name="icon" class="form-control" id="icon">
-                @error('icon')
-                 <p class="text-danger"> {{$message}}</p>
-                @enderror
-              </div>
-              <div class="col-6">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" name="title" class="form-control" id="title">
-                @error('title')
-               <p class="text-danger"> {{$message}}</p>
-              @enderror
               </div>
               <div class="col-6">
                 <label for="description" class="form-label">Description</label>
                 <input type="text" name="description" class="form-control" id="description">
-                @error('description')
-               <p class="text-danger"> {{$message}}</p>
-              @enderror
               </div>
                 <div class="col-6 ">
                   <button type="submit" name="submit" class="btn btn-primary">Submit</button>

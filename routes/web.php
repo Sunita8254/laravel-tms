@@ -26,6 +26,7 @@ Route::get('/about', function () {
 
 // backend routes
 Route::resource('about-feature','App\Http\Controllers\AboutFeatureController');
+Route::resource('hero','App\Http\Controllers\HeroController');
 
 Route::get('/admin', function () {
     return view('admin.index');

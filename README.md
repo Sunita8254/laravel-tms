@@ -51,8 +51,19 @@ composer update
 How to work??
 1. integrate frontend files in laravel templete & create route for frontend
 2. integrate backend files in laravel templete
+
+database design
+table name: hero
+id | title | subtitle | img | created_at | updated_at
+
+
+create folder and files under view/admin/hero
+
+routes:
+
 3. create controller, model and database 
-4. create routes for backend
+
+4. add database fields in database/migration/
 
 note: when you update web.php : php artisan optimize (clare config and route cache)
 
@@ -66,6 +77,38 @@ now: browser   /about-feature
                 aboutFeatureController ko create function: about feature ko create page
                 after save
                 aboutFeatureController ko store function: add about feature data or store
-                
+
+
+     task | Assignment           
+
+
+
+testimonial
+title | message | name | post 
+
+view/admin/testimonial
+create.blade.php
+edit
+index
+view
+
+
+route:
+
+
+create: model , controller, and migration
+// php artisan make:model Testimonial --migration --controller --resource
+
+migration/tabel
+ add fields name
+
+model
+add database fields
+
+php artisan migrate
+php artisan migrate:fresh
+
+http://127.0.0.1:8000/
+
 
                 
