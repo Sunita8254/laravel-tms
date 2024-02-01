@@ -16,17 +16,24 @@ use Illuminate\Support\Facades\Route;
 
 
 // frontend routes
-Route::get('/', function () {
-    return view('front-end.index');
-});
-Route::get('/about', function () {
-    return view('front-end.index');
-});
+// Route::get('/', function () {
+//     return view('front-end.index');
+// });
+
+Route::get('/', 'App\Http\Controllers\FrontendController@index');
+Route::get('/about', 'App\Http\Controllers\FrontendController@about');
+Route::get('/services', 'App\Http\Controllers\FrontendController@service');
+
+
+
+
+
 
 
 // backend routes
 Route::resource('about-feature','App\Http\Controllers\AboutFeatureController');
 Route::resource('hero','App\Http\Controllers\HeroController');
+Route::resource('testimonial','App\Http\Controllers\TestimonialController');
 
 Route::get('/admin', function () {
     return view('admin.index');

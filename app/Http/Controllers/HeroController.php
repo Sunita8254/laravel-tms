@@ -12,7 +12,9 @@ class HeroController extends Controller
      */
     public function index()
     {
-        return view('admin.hero.index');
+        $heroes= new Hero();
+        $heroes=$heroes->all();
+        return view('admin.hero.index', compact('heroes'));
     }
 
     /**
@@ -28,7 +30,21 @@ class HeroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'title' => 'required',
+                'sub_title' => 'required',
+                'img' => 'required',
+            ]
+        );
+
+        $hero = new hero;
+        $hero->title = $request->title;
+        $hero->sub_title = $request->sub_title;
+        $hero->img = $request->img;
+
+        $hero->save();
+        return redirect()->route('hero.index');
     }
 
     /**
