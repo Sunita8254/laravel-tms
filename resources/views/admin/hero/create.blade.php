@@ -22,7 +22,7 @@
           <div class="card-body">
             <h5 class="card-title">About Hero</h5>
             <!-- Vertical Form -->
-            <form class="row g-3" method="POST" action="{{route('about-feature.store')}}" enctype="multipart/form-data">
+            <form class="row g-3" method="POST" action="{{route('hero.store')}}" enctype="multipart/form-data">
               @csrf
               <div class="col-6">
                 <label for="title" class="form-label">Title</label>
@@ -40,7 +40,7 @@
               </div>
               <div class="col-6">
                 <label for="img" class="form-label">Image</label>
-                <input type="text" name="img" class="form-control" id="img">
+                <input type="file" name="img" class="form-control" id="img">
                 @error('img')
                 <p class="text-danger"> {{$message}}</p>
                @enderror

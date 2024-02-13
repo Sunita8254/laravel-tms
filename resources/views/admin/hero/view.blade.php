@@ -4,11 +4,11 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Edit Hero</h1>
+    <h1>Hero</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <li class="breadcrumb-item active">Edit Hero</li>
+        <li class="breadcrumb-item active">Hero</li>
       </ol>
     </nav>
   </div><!-- End Page title -->
@@ -20,21 +20,22 @@
 
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Edit Hero</h5>
+            <h5 class="card-title">Hero</h5>
+            <a class="btn btn-primary btn-sm " href="{{route('hero.create')}}" role="button">Add </a>
+
             <!-- Vertical Form -->
-            <form class="row g-3" method="POST" action="{{route('hero.update',$heroes->id)}}" enctype="multipart/form-data">
-              @method('put')
+            <form class="row g-3" method="POST" action="#" enctype="multipart/form-data">
               @csrf
               <div class="col-6">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" name="title" value="{{$heroes->title}}" class="form-control" id="title">
+                <input type="text" readonly name="title" value="{{$heroes->title}}" class="form-control" id="title">
                 @error('title')
                 <p class="text-danger"> {{$message}}</p>
                @enderror
               </div>
               <div class="col-6">
                 <label for="sub_title" class="form-label">Sub_Title</label>
-                <input type="text" name="sub_title" value="{{$heroes->sub_title}}" class="form-control" id="sub_title">
+                <input type="text" readonly name="sub_title" value="{{$heroes->sub_title}}" class="form-control" id="sub_title">
                 @error('sub_title')
                 <p class="text-danger"> {{$message}}</p>
                @enderror
@@ -42,14 +43,11 @@
               <div class="col-6">
                 <label for="img" class="form-label">Image</label>
                 <img src="{{asset('uploads/'.$heroes->img)}}" width="100" height="100" alt="">
-                <input type="file" name="img" class="form-control" id="img">
                 @error('img')
                 <p class="text-danger"> {{$message}}</p>
                @enderror
               </div>
-                <div class="col-6 ">
-                  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-                </div>
+            
             </form><!-- Vertical Form -->
 
           </div>

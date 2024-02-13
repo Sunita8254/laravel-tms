@@ -4,11 +4,11 @@
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Manage About Features</h1>
+    <h1>Manage Testimonials</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <li class="breadcrumb-item active">Manage About Features </li>
+        <li class="breadcrumb-item active">Manage Testimonials </li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
@@ -19,7 +19,7 @@
 
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Manage About Features</h5>
+            <h5 class="card-title">Manage Testimonials</h5>
             <a class="btn btn-primary btn-sm " href="{{route('testimonial.create')}}" role="button">Add </a>
 
             <!-- Table with stripped rows -->
@@ -27,10 +27,10 @@
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Icon</th>
                   <th>Title</th>
-                  <th>Description</th>
-                  <th>Action</th>
+                  <th>Message</th>
+                  <th>Name</th>
+                  <th>Post</th>
                 </tr>
               </thead>
               <tbody>
@@ -39,9 +39,10 @@
              
                 <tr>
                   <td>{{$loop->iteration}}</td>
-                  <td>{{$testimonial->icon}}</td>
                   <td>{{$testimonial->title}}</td>
-                  <td>{{$testimonial->description}}</td>
+                  <td>{{$testimonial->message}}</td>
+                  <td>{{$testimonial->name}}</td>
+                  <td>{{$testimonial->post}}</td>
                   <td>
                     <a class="btn btn-primary btn-sm " href="#" role="button">Edit </a>
                     <a class="btn btn-info btn-sm " href="#" role="button">View </a>

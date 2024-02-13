@@ -71,7 +71,7 @@
 <script>
   function selectImage() {
     let x = document.querySelector('input[name=img_link]:checked').value;
-    //var selectedOption = $("input:radio[name=filename]:checked").val()
+    //var selectedOption = $("input:radio[name=filenamew]:checked").val()
     document.getElementById('sliderbox').value = x; // use .innerHTML if we want data on label
   }
 </script>
